@@ -11,9 +11,16 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
     <title>Wedding Map</title>
+    <link rel="stylesheet" href="/assets/index.css" />
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      const isViteDevServer =
+        ['localhost', '127.0.0.1'].includes(window.location.hostname) &&
+        window.location.port.startsWith('517');
+
+      import(isViteDevServer ? '/src/main.tsx' : '/assets/index.js');
+    </script>
   </body>
 </html>
