@@ -21,7 +21,7 @@ export function Timeline() {
           <p className="eyebrow">D-Day Roadmap</p>
           <h2>지금부터 순서대로 준비하세요</h2>
         </div>
-        <span>{completedTaskIds.length}/{weddingTasks.length}</span>
+        <span>{completedTaskIds.length}/{weddingTasks.length} 완료</span>
       </div>
 
       <div className="timeline-list">
@@ -32,6 +32,7 @@ export function Timeline() {
           return (
             <article className="milestone-card" key={milestone}>
               <header className="milestone-header">
+                <span className="milestone-dot" aria-hidden="true" />
                 <div>
                   <p>{milestone}</p>
                   <h3>{formatShortDate(dueDate)}까지</h3>
@@ -58,7 +59,7 @@ export function Timeline() {
                           <span className="task-tag">{task.tag}</span>
                           <strong>{task.title}</strong>
                         </span>
-                        <span className="chevron">{isOpen ? '접기' : '이유'}</span>
+                        <span className="chevron">{isOpen ? '접기' : 'Why'}</span>
                       </button>
 
                       {isOpen && <p className="task-detail">{task.description}</p>}

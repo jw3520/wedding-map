@@ -19,6 +19,9 @@ export function Onboarding() {
           <span />
           <span />
         </div>
+        <div className="onboarding-badge" aria-hidden="true">
+          WM
+        </div>
         <p className="eyebrow">Wedding Map</p>
         <h1>결혼 예정일이 언제인가요?</h1>
         <p className="intro-copy">
@@ -37,6 +40,7 @@ export function Onboarding() {
           />
           <button type="submit">로드맵 만들기</button>
         </form>
+        <p className="onboarding-note">가입 없이 바로 시작하고, 새로고침해도 저장됩니다.</p>
       </section>
     </main>
   );

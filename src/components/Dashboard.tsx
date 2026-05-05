@@ -10,6 +10,7 @@ export function Dashboard() {
   return (
     <section className="dashboard-view">
       <article className="share-card">
+        <span className="share-badge">공유 전용</span>
         <p className="eyebrow">Read-only Briefing</p>
         <h2>가족과 파트너에게 공유하기 좋은 현황판</h2>
         <p>
@@ -20,7 +21,7 @@ export function Dashboard() {
 
       <article className="progress-card">
         <div className="progress-topline">
-          <span>전체 준비 달성률</span>
+          <span>전체 준비율</span>
           <strong>{progress}%</strong>
         </div>
         <div className="progress-track" aria-label={`전체 준비 달성률 ${progress}%`}>
