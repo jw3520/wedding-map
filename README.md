@@ -9,6 +9,10 @@ npm install
 npm run dev
 ```
 
+개발 서버는 `/index.dev.html`을 사용합니다.
+루트 `index.html`은 Cloudflare Pages 루트 정적 배포와 호환되도록 빌드된
+`/assets/index.js`를 직접 로드합니다.
+
 ## 검증
 
 ```bash

@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open /index.dev.html",
     "build": "tsc -b && vite build && cp index.html dist/index.html && mkdir -p assets icons && cp dist/assets/index.js assets/index.js && cp dist/assets/index.css assets/index.css && cp public/manifest.webmanifest manifest.webmanifest && cp public/icons/icon-192.svg icons/icon-192.svg && cp public/icons/icon-512.svg icons/icon-512.svg && cp public/_redirects _redirects && cp public/_headers _headers",
     "preview": "vite preview",
     "lint": "eslint ."
