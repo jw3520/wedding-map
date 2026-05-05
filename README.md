@@ -21,6 +21,17 @@ npm run build
 빌드 명령은 `npm run build`입니다.
 출력 디렉터리는 `dist`입니다.
 
+Cloudflare Pages가 repo 루트의 `index.html`을 그대로 서빙하면 Vite 개발용
+`/src/main.tsx`가 브라우저에 전달됩니다.
+이 경우 배포 환경에서 다음 오류가 발생합니다.
+
+```text
+Failed to load module script: Expected a JavaScript-or-Wasm module script...
+```
+
+Pages 설정 파일인 `wrangler.toml`에 `pages_build_output_dir = "./dist"`를 명시해
+빌드 산출물만 배포되도록 고정합니다.
+
 React SPA는 직접 URL 접근이나 새로고침 시 서버가 `index.html`을 반환해야 합니다.
 이를 위해 `public/_redirects`에 다음 규칙을 둡니다.
 
